@@ -15,7 +15,7 @@ fs.readdir(secretFolder, { withFileTypes: true }, (err, files) => {
           if (err)
             console.log(err);
           else {
-            let size = Number(stats["size"]/2000).toFixed(3);
+            let size = Number(stats["size"]/1000).toFixed(3);
             stdout.write(`${name} - ${ext} - ${size}kb\n`);
           }
         })
