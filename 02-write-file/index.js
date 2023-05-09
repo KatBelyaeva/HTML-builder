@@ -13,3 +13,7 @@ stdin.on('data', data => {
     output.write(data.toString());
   }
 });
+process.on('SIGINT', () => {
+  stdout.write('До свидания!');
+  exit();
+})
